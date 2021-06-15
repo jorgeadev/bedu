@@ -1,0 +1,28 @@
+h1 {
+    color: blue;
+}
+h2 {
+    color: #46484c;
+}
+
+p {
+    color: #8b8b8bcc;
+}
+
+button {
+    margin-top: 10px;
+    color: #fff;
+    background-color: #025157;
+    border-color: #025157;
+    width: 165px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: #fffbf7;
+}
+
+input {
+    margin-bottom: 5px;
+}
