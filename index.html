@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Aquí va información importante pero no visible dentro del navegador -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +8,41 @@
         <title>Matcha</title>
     </head>
     <body>
-        <!-- Esto es lo que se verá en el navegador web -->
-        <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <em>Provident animi inventore blanditiis sed
-                amet ut tempora voluptas quia voluptate ratione expedita nemo nulla,</em> nesciunt esse excepturi maiores molestiae nostrum eaque.
-        </h1>
-        <h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <s>Magni, vero fugiat minus assumenda commodi
-                ullam cumque dignissimos natus dolorem aperiam recusandae</s> corporis amet aspernatur id ipsum consectetur provident excepturi aliquid.
-        </h2>
-        <h3>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <u>Totam, qui placeat corrupti laudantium,
-                harum molestiae veritatis architecto pariatur odit debitis distinctio,</u> illum voluptatum ab perferendis. Et quae vitae ex dignissimos.
-        </h3>
-        <h4>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <strong>Totam, qui placeat corrupti laudantium,
-                harum molestiae veritatis architecto pariatur odit debitis distinctio,</strong> illum voluptatum ab perferendis. Et quae vitae ex dignissimos.
-        </h4>
-        <h5>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <i>Totam, qui placeat corrupti laudantium,
-                harum molestiae veritatis architecto pariatur odit debitis distinctio,</i> illum voluptatum ab perferendis. Et quae vitae ex dignissimos.
-        </h5>
-        <h6>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <small>Totam, qui placeat corrupti laudantium,
-                harum molestiae veritatis architecto pariatur odit debitis distinctio,</small> illum voluptatum ab perferendis. Et quae vitae ex dignissimos.
-        </h6>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <b>Dolore, explicabo fugiat atque,
-                vero impedit ipsa dolorum corporis reiciendis inventore omnis est molestias voluptate delectus quam tempora hic.</b> Autem, vero cum.
-        </p>
-
-        <!-- <input type="text"> <br> -->
-        <form action="">
-            <input type="text" placeholder="Name"> <br>
-            <input type="text" placeholder="Last Name"><br>
-            <input type="number" placeholder="Age"><br>
-            <input type="email" placeholder="example@gmail.com"><br>
-            <input type="password" placeholder="*********"><br>
-            <button type="submit">Send</button>
+        <header class="header">
+            <a href="/index.html" class="logo">
+                <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg" alt="Matcha"/>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Templates</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Customer</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <a href="./html/login.html">Sign In</a>
+                <button>Start free trial</button>
+            </div>
+        </header>
+        <h1>Mi primera etiqueta h1</h1>
+        <h2>Mi etiqueta h2</h2>
+        <h3>Mi etiqueta h3</h3>
+        <h4>Mi etiqueta h4</h4>
+        <h5>Mi etiqueta h5</h5>
+        <h6>Mi etiqueta h5</h6>
+        <p> Mi etiqueta de párrafo </p>
+        <form>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="fname"><br><br>
+            <input type="text" id="lastname" name="lastname" placeholder="Apellido"><br><br>
+            <input type="number" id="age" name="age" placeholder="Edad" min="18" max="35"><br><br>
+            <input type="email" id="email" name="email" placeholder="Correo"><br><br>
+            <input type="password" id="password" name="password" placeholder="Contraseña"><br><br>
+            <button type="submit">Enviar</button>
         </form>
-
         <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/capterra.png" alt="Image to load">
-
     </body>
 </html>
