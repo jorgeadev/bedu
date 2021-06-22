@@ -8,25 +8,29 @@
         <title>Matcha</title>
     </head>
     <body>
-        <header class="header">
-            <a href="/index.html" class="logo">
-                <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg" alt="Matcha"/>
-            </a>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Customer</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Resources</a></li>
-                </ul>
-            </nav>
-            <div class="actions">
-                <a href="./html/login.html">Sign In</a>
-                <button>Start free trial</button>
-            </div>
-        </header>
+        <section class="fixed-header">
+            <header class="header">
+                <a href="/index.html" class="logo">
+                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg" alt="Matcha"/>
+                </a>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Customer</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </nav>
+                <div class="actions">
+                    <a href="./html/login.html">Sign In</a>
+                    <button>Start free trial</button>
+                </div>
+            </header>
+        </section>
+
+
         <h1>Mi primera etiqueta h1</h1>
         <h2>Mi etiqueta h2</h2>
         <h3>Mi etiqueta h3</h3>
@@ -44,5 +48,35 @@
             <button type="submit">Enviar</button>
         </form>
         <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/capterra.png" alt="Image to load">
+
+        <section class="promo">
+            <article>
+                <video
+                        controls
+                        poster="https://cdn.videvo.net/videvo_files/video/premium/video0036/thumbnails/computer_code00_small.jpg"
+                        src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.mp4"
+                >
+                </video>
+                <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/see_how_it_works.png" alt="" id="image-promo">
+            </article>
+
+            <article class="publish">
+                <h3>Publish to your blog in minutes, not hours.</h3>
+                <p>
+                    Your blog is your most powerful asset to build, engage, and retain a loyal
+                    audience. But you don’t have hours to create content that may or may not
+                    work. With Matcha, instantly publish from our library of 10,000+
+                    professionally written articles and build your email list faster with our
+                    powerful conversion tool.
+                </p>
+                <form>
+                    <p>Start publishing today:</p>
+                    <div class="publish-form">
+                        <input type="text" placeholder="Enter email" />
+                        <button>Start My Trial</button>
+                    </div>
+                </form>
+            </article>
+        </section>
     </body>
 </html>

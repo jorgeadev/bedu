@@ -17,7 +17,7 @@ input {
     margin-bottom: 5px;
 }
 .header {
-    margin: 40px 20px 0 20px;
+    margin: 40px 20px 50px 20px;
     font-size: 0;
     line-height: 45px;
     font-family: sans-serif;
@@ -57,10 +57,62 @@ li a {
     color: #67b54b;
     text-decoration: none;
 }
-.actions button {
+button {
     color: white;
     background-color: #67b54b;
     padding: 12px 14px 12px 14px;
     border: 0;
     border-radius: 5px;
+}
+
+/* Publish CSS */
+.publish {
+    margin-left: 35px;
+}
+
+.publish h3 {
+    font-family: "Roboto", serif;
+    font-size: 40px;
+    line-height: 48px;
+    color: #025157;
+}
+
+.publish > p {
+    font-size: 16px;
+    color: #343434;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.publish > form {
+    display: flex;
+}
+
+.publish > form p {
+    color: #025157;
+    margin-right: 18px;
+}
+
+.publish-form input {
+    height: 32px;
+}
+
+.promo {
+    display: flex;
+    width: 70%;
+    margin: 100px auto;
+}
+
+#image-promo {
+    width: 150px;
+    display: flow;
+}
+
+.fixed-header {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
