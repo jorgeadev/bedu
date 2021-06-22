@@ -17,7 +17,7 @@ input {
     margin-bottom: 5px;
 }
 .header {
-    margin: 40px 20px 50px 20px;
+    margin: 20px 20px 50px 20px;
     font-size: 0;
     line-height: 45px;
     font-family: sans-serif;
@@ -44,6 +44,7 @@ li {
 }
 li a {
     color: #025157;
+    text-decoration: none;
 }
 .actions {
     width: 15%;
@@ -110,7 +111,7 @@ button {
 
 .fixed-header {
     position: fixed;
-    background-color: white;
+    background-color: #fffbf7;
     top: 0;
     left: 0;
     right: 0;
