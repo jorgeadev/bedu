@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: #fffbf7;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+.navbar {
+    width: 70%;
+    text-align: center;
+    color: #025157;
 }
 h1 {
     color: blue;
@@ -37,11 +50,7 @@ li {
 .logo {
     width: 15%;
 }
-.navbar {
-    width: 70%;
-    text-align: center;
-    color: #025157;
-}
+
 li a {
     color: #025157;
     text-decoration: none;
@@ -116,4 +125,128 @@ button {
     left: 0;
     right: 0;
     width: 100%;
+}
+
+/* Stories Section */
+.stories {
+    background-color: #A1D683;
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.stories .overview {
+    flex: 2;
+    padding-right: 100px;
+}
+.stories .overview h2 {
+    font-family: 'Hind', Arial, sans-serif;
+    font-size: 50px;
+    line-height: 60px;
+    color: #025157;
+}
+.stories .overview p {
+    color: #343434;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.stories .overview button {
+    font-size: 14px;
+    padding: 12px 12px 6px 12px;
+    border-radius: 8px;
+    height: 45px;
+    font-weight: 600;
+    margin-left: 0;
+}
+.stories .overview img {
+    width: 600px;
+    max-width: 100%;
+}
+.stories .carousel {
+    flex: 1;
+}
+.stories .carousel .carousel-indicators {
+    position: unset;
+    justify-content: center;
+}
+.stories .carousel .card {
+    max-width: 370px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.stories .carousel .card .card-media img {
+    width: 100%;
+    max-height: 16vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.stories .carousel .card .card-media figure {
+    margin-top: 0;
+}
+.stories .carousel .card .card-media {
+    position: relative;
+}
+.stories .carousel .card .card-media .company {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #F9DA73;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stories .carousel .card .card-media .company img {
+    max-width: 75%;
+}
+.stories .carousel .card .card-body,
+.stories .carousel .card .card-footer {
+    padding: 25px;
+}
+.stories .carousel .card .card-body h4 {
+    color: #025157;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+.stories .carousel .card .card-body h3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.stories .carousel .card .card-body .results {
+    display: flex;
+    align-items: center;
+    color: #828282;
+}
+.stories .carousel .card .card-body .results img {
+    width: 26px;
+    margin-right: 20px;
+}
+.stories .carousel .card .card-body .results p {
+    margin-top: 0;
+}
+.stories .carousel .card .card-footer {
+    margin-bottom: 20px;
+    background-color: unset;
+    border-top: unset;
+}
+.stories .carousel .card .card-footer button {
+    display: block;
+    margin-left: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    width: 100%;
+}
+.stories .carousel .carousel-inner {
+    display: flex;
+    flex-direction: column;
 }
