@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    flex-wrap: wrap;
+flex-direction: row;
+}
+
+.container .item {
+    background-color: gray;
+    width: 50%;
+    height: 50px;
+}
+
+.main {
+    display: flex;
+    width: 500px;
+}
+
+.main div:nth-of-type(1) {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+.main div:nth-of-type(2) {
+    flex-basis: 100px;
+    flex-grow: 5;
+}
+.main div:nth-of-type(3) {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+.main div:nth-of-type(4) {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
