@@ -296,58 +296,55 @@ figure.intro > img {
     width: 100%;
 }
 
+
+
+
+
+/* Features Section */
 .features {
     background-color: #025157;
     padding: 5% 10%;
     display: grid;
     grid-template: repeat(2, 330px) / repeat(2, 1fr);
 }
-
 .features .feature-card {
     margin-bottom: 30px;
     margin-left: 15px;
     margin-right: 15px;
     background-color: #EEEEEE;
-    border: 1px solid #dadada;
+    border: 1px solid #DADADA;
     border-radius: 5px;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
-
 .features .feature-card .feature-content {
     padding: 30px 20px 40px 40px;
     flex: 2;
 }
-
 .features .feature-card .feature-content > * {
     margin-bottom: 1rem;
     margin-top: 0;
 }
-
 .features .feature-card .feature-content img {
     width: 50px;
 }
-
 .features .feature-card .feature-content h3 {
     font-size: 24px;
     color: #343434;
     font-weight: 400;
 }
-
 .features .feature-card .feature-content p {
     font-size: 16px;
     color: #7e7e7e;
     font-weight: 400;
 }
-
 .features .feature-card .feature-content a {
     font-size: 16px;
     color: #67b54b;
     font-weight: 600;
     text-decoration: none;
 }
-
 .features .feature-card .feature-image {
     flex: 1;
     width: 40%;
@@ -355,19 +352,21 @@ figure.intro > img {
     right: -50px;
     height: 80%;
 }
-
 .features .feature-card .feature-image figure,
 .features .feature-card .feature-image img {
     margin-top: 0;
     height: 100%;
 }
 
+
+
+
+/* How Does it Work Section - PostWork Session 4 */
 .how-does-it-work {
     background-color: #fffbf7;
     padding: 5% 10%;
     text-align: center;
 }
-
 .how-does-it-work .title {
     color: #025157;
     font-size: 50px;
@@ -376,22 +375,18 @@ figure.intro > img {
     font-family: "Alegreya", serif;
     margin-bottom: 8px;
 }
-
 .how-does-it-work .description {
     max-width: 60%;
     color: #46484c;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
-    margin: 0 auto;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
 }
-
 .how-does-it-work .description a {
     color: #67b54b;
     text-decoration: none;
 }
-
 .how-does-it-work button {
     font-size: 14px;
     font-weight: 600;
@@ -401,13 +396,11 @@ figure.intro > img {
     border-radius: 8px;
     margin-top: 6px;
 }
-
 .how-does-it-work .steps {
     margin-top: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .how-does-it-work .steps .card-step {
     background-color: #fff;
     border: 1px solid #dadada;
@@ -416,28 +409,23 @@ figure.intro > img {
     margin-right: 20px;
     text-align: left;
 }
-
 .how-does-it-work .steps .card-step .card-step-image {
     position: relative;
     height: 350px;
 }
-
 .how-does-it-work .steps .card-step .card-step-image .card-step-icon {
     position: absolute;
     top: 25px;
     left: 25px;
     width: 21px;
 }
-
 .how-does-it-work .steps .card-step .card-step-image .card-step-bg {
     width: 100%;
     height: 100%;
 }
-
 .how-does-it-work .steps .card-step .card-step-body {
     padding: 25px;
 }
-
 .how-does-it-work .steps .card-step .card-step-body h3 {
     font-size: 30px;
     line-height: 36px;
@@ -446,7 +434,6 @@ figure.intro > img {
     font-weight: 400;
     text-align: center;
 }
-
 .how-does-it-work .steps .card-step .card-step-body p {
     font-size: 15px;
     line-height: 1.5;
@@ -455,7 +442,6 @@ figure.intro > img {
     height: 85px;
     margin-bottom: 16px;
 }
-
 .how-does-it-work .steps .card-step .card-step-body a {
     font-size: 16px;
     line-height: 1.4;
@@ -464,6 +450,12 @@ figure.intro > img {
     text-decoration: none;
 }
 
+
+
+
+
+
+/* Section Blog */
 .blog {
     background-color: #fff;
     max-width: unset;
