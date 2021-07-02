@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Matcha</title>
+<!--        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
         <link rel="stylesheet" type="text/css" href="./styles.css" />
     </head>
@@ -42,6 +43,36 @@
             </div>
         </nav>
 
+        <section>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/carousel/carousel-01.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carousel/carousel-02.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carousel/carousel-03.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+
         <main>
             <h1>Build your blog. Build your business.</h1>
             <h4>Instantly publish articles, drive more traffic, grow your email list, and see your blog’s impact on sales.</h4>
@@ -58,6 +89,17 @@
             </figure>
         </main>
 
+        <!-- <input type="text"><br> -->
+        <section class="publish">
+            <form>
+                <input type="text" id="name" name="fname" required placeholder="Nombre">
+                <input type="text" id="lastname" name="lastname" placeholder="Apellido">
+                <input type="number" id="age" name="age" placeholder="Edad" min="18" max="35">
+                <input type="email" id="email" name="email" placeholder="Correo">
+                <input type="password" id="password" name="password" placeholder="Contraseña">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
         <!-- SESSION 3 -->
         <section class="promo">
@@ -83,8 +125,6 @@
                 </div>
             </article>
         </section>
-
-
 
         <!-- SESSION 4 -->
         <section class="features">
