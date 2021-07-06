@@ -1,0 +1,105 @@
+/** _global.scss */
+/** fuentes */
+/** placeholders */
+.blog .title {
+  font-family: "Alegreya", serif;
+  color: #135359;
+}
+
+/** main.scss */
+.blog {
+  background-color: #ffffff;
+  max-width: unset;
+  padding: 5% 10%;
+}
+.blog .process-list {
+  margin-top: 40px;
+  margin-bottom: 36px;
+}
+.blog .process-list .process {
+  margin-bottom: 25px;
+}
+.blog .process-list .process > div > h3 {
+  color: #025157;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+.blog .process-list .process > div > p {
+  color: #135359;
+  margin: 0;
+}
+.blog .process-list .process .process-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  text-align: center;
+}
+.blog .process-list .process .process-icon img {
+  height: 100%;
+}
+.blog button {
+  height: auto;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 12px;
+  width: 180px;
+  margin-bottom: 15px;
+}
+.blog .col {
+  float: left;
+  width: 31%;
+  padding: 1%;
+}
+.blog .col .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+.blog .col .card .card-body {
+  padding: 20px;
+}
+.blog .col .card .card-body .card-title {
+  font-size: 20px;
+}
+.blog .col .card .card-body .metadata {
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 14px;
+}
+.blog .col .card .card-body .metadata .category {
+  color: #67b54b;
+}
+.blog .col .card .card-body .card-text {
+  font-style: normal;
+  line-height: normal;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+.blog .col .card .card-body .card-text .read-more {
+  color: #4a4a4a !important;
+  text-decoration: underline;
+}
+.blog .col .card .card-body .card-text a {
+  color: #4a4a4a;
+}
+.blog .col .card .card-body .author {
+  display: flex;
+}
+.blog .col .card .card-body .author img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.blog .col .card .card-body .author p {
+  margin-left: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4a4a4a;
+  position: relative;
+}
+
+/*# sourceMappingURL=output.css.map */

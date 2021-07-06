@@ -1,0 +1,22 @@
+{
+    "name": "santander-bedu-frontend",
+    "version": "1.0.0",
+    "description": "git init",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jorgealbertogomezgomez77/bedu.git"
+    },
+    "author": "Jorge Alberto Gomez Gomez",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jorgealbertogomezgomez77/bedu/issues"
+    },
+    "homepage": "https://github.com/jorgealbertogomezgomez77/bedu#readme",
+    "dependencies": {
+        "sass": "^1.35.1"
+    }
+}
