@@ -1,1 +1,0 @@
-# Bedu repository
