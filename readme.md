@@ -1,5 +1,3 @@
-![Matcha Banner](C:\Users\jorge.gemini\antigravity\brain\88e44600-60f3-43da-9473-bdceb7dcf417\matcha_banner_1775707702705.png)
-
 # 🍃 Matcha
 
 ### Build your blog. Build your business.
@@ -78,7 +76,7 @@ npm install -g pnpm
 
 **Jorge Alberto Gomez Gomez**
 
-- GitHub: [@jorgealbertogomezgomez77](https://github.com/jorgealbertogomezgomez77)
+- GitHub: [@jorgeadev](https://github.com/jorgeadev)
 
 ---
 
