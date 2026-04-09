@@ -37,5 +37,8 @@
 			"pnpm run lint:fix",
 			"pnpm run format"
 		]
+	},
+	"engines": {
+		"node": ">=22"
 	}
 }
