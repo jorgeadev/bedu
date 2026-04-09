@@ -13,6 +13,14 @@ body {
 
 .navbar {
     background-color: #fffbf7;
+    height: 80px !important;
+}
+
+.navbar-brand img {
+    height: 35px !important;
+    width: auto !important;
+    display: inline-block !important;
+    object-fit: contain;
 }
 
 .navbar-light .nav-item .nav-link {
@@ -198,6 +206,13 @@ figure.intro > img {
     max-width: 100%;
 }
 
+/* Main Carousel Optimization */
+.carousel-inner img {
+    height: 500px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
 .success-stories .stories-carousel {
     flex: 1;
 }
@@ -327,7 +342,9 @@ figure.intro > img {
     margin-top: 0;
 }
 .features .feature-card .feature-content img {
-    width: 50px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 .features .feature-card .feature-content h3 {
     font-size: 24px;
@@ -417,7 +434,9 @@ figure.intro > img {
     position: absolute;
     top: 25px;
     left: 25px;
-    width: 21px;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
 }
 .how-does-it-work .steps .card-step .card-step-image .card-step-bg {
     width: 100%;
@@ -669,6 +688,13 @@ figure.intro > img {
 
 .footer .social {
     margin-left: 28px;
+}
+
+.footer .media img {
+    height: 35px !important;
+    width: auto !important;
+    display: block;
+    margin-bottom: 20px;
 }
 
 .footer .social a {
