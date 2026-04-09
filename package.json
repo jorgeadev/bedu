@@ -33,9 +33,9 @@
 		"prettier": "3.8.1"
 	},
 	"lint-staged": {
-		"*.js": [
-			"pnpm run lint:fix",
-			"pnpm run format"
+		"*.{js,mjs,cjs}": [
+			"eslint --fix",
+			"prettier --write"
 		]
 	},
 	"engines": {
