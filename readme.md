@@ -43,7 +43,7 @@ npm install -g pnpm
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/jorgealbertogomezgomez77/bedu.git
+   git clone https://github.com/jorgeadev/bedu.git
    ```
 
 2. **Install dependencies**:
