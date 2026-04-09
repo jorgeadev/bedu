@@ -1,644 +1,669 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Matcha</title>
-    <link rel="stylesheet" type="text/css" href="./output.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;900&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&family=Slabo+27px&display=swap" rel="stylesheet">
-</head>
-<body class="bg-[#fffbf7] font-sans text-gray-800 antialiased selection:bg-[#a1d683] selection:text-white overflow-x-hidden">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Matcha</title>
+		<link rel="stylesheet" type="text/css" href="./output.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;900&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&family=Slabo+27px&display=swap" rel="stylesheet" />
+	</head>
+	<body class="bg-[#fffbf7] font-sans text-gray-800 antialiased selection:bg-[#a1d683] selection:text-white overflow-x-hidden">
+		<!-- Navbar -->
+		<nav class="fixed top-0 left-0 w-full z-50 bg-[#fffbf7]/80 backdrop-blur-lg border-b border-gray-200/50 transition-all duration-300 h-20 flex items-center px-6 lg:px-12">
+			<a class="flex-shrink-0" href="#">
+				<img src="./img/logo.png" alt="Matcha" class="h-9 w-auto object-contain" />
+			</a>
+			<div class="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2 space-x-8">
+				<a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Platform</a>
+				<a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Pricing</a>
+				<a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Customers</a>
+				<a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Resources</a>
+				<a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">About</a>
+			</div>
+			<form class="hidden lg:flex items-center space-x-6 ml-auto signup-form">
+				<a href="#" class="text-[#67b54b] font-bold hover:text-[#025157] transition duration-200 cursor-pointer w-auto whitespace-nowrap">Sign In</a>
+				<button class="bg-[#67b54b] hover:bg-[#5da044] text-white font-bold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap">Start free trial</button>
+			</form>
+		</nav>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-[#fffbf7]/80 backdrop-blur-lg border-b border-gray-200/50 transition-all duration-300 h-20 flex items-center px-6 lg:px-12">
-        <a class="flex-shrink-0" href="#">
-            <img src="./img/logo.png" alt="Matcha" class="h-9 w-auto object-contain" />
-        </a>
-        <div class="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2 space-x-8">
-            <a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Platform</a>
-            <a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Pricing</a>
-            <a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Customers</a>
-            <a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">Resources</a>
-            <a class="text-[#025157] font-semibold hover:text-[#67b54b] transition duration-200" href="#">About</a>
-        </div>
-        <form class="hidden lg:flex items-center space-x-6 ml-auto signup-form">
-            <a href="#" class="text-[#67b54b] font-bold hover:text-[#025157] transition duration-200 cursor-pointer w-auto whitespace-nowrap">Sign In</a>
-            <button class="bg-[#67b54b] hover:bg-[#5da044] text-white font-bold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap">Start free trial</button>
-        </form>
-    </nav>
+		<!-- Hero Section Carousel -->
+		<section id="hero-carousel" class="mt-20 relative w-full h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden flex items-center justify-center group">
+			<div class="absolute inset-0 w-full h-full">
+				<img src="./img/carousel/carousel-01.jpg" alt="Hero 1" class="hero-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100" />
+				<img src="./img/carousel/carousel-02.jpg" alt="Hero 2" class="hero-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+				<img src="./img/carousel/carousel-03.jpg" alt="Hero 3" class="hero-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+			</div>
+			<div class="absolute inset-0 bg-gradient-to-t from-[#fffbf7] via-[#fffbf7]/70 to-transparent"></div>
+			<div class="absolute inset-0 bg-[#025157]/20"></div>
 
-    <!-- Hero Section Carousel -->
-    <section id="hero-carousel" class="mt-20 relative w-full h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden flex items-center justify-center group">
-        <div class="absolute inset-0 w-full h-full">
-            <img src="./img/carousel/carousel-01.jpg" alt="Hero 1" class="hero-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100" />
-            <img src="./img/carousel/carousel-02.jpg" alt="Hero 2" class="hero-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
-            <img src="./img/carousel/carousel-03.jpg" alt="Hero 3" class="hero-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#fffbf7] via-[#fffbf7]/70 to-transparent"></div>
-        <div class="absolute inset-0 bg-[#025157]/20"></div>
+			<!-- Hero Controls -->
+			<button class="hero-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/70 text-white hover:text-[#025157] rounded-full p-2 lg:p-4 opacity-0 group-hover:opacity-100 transition-all z-20 focus:outline-none">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+			</button>
+			<button class="hero-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/70 text-white hover:text-[#025157] rounded-full p-2 lg:p-4 opacity-0 group-hover:opacity-100 transition-all z-20 focus:outline-none">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+			</button>
+			<div class="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20 hero-indicators">
+				<button class="w-3 h-3 rounded-full bg-white transition-opacity opacity-100" data-idx="0"></button>
+				<button class="w-3 h-3 rounded-full bg-white transition-opacity opacity-50" data-idx="1"></button>
+				<button class="w-3 h-3 rounded-full bg-white transition-opacity opacity-50" data-idx="2"></button>
+			</div>
 
-        <!-- Hero Controls -->
-        <button class="hero-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/70 text-white hover:text-[#025157] rounded-full p-2 lg:p-4 opacity-0 group-hover:opacity-100 transition-all z-20 focus:outline-none">
-             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <button class="hero-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/70 text-white hover:text-[#025157] rounded-full p-2 lg:p-4 opacity-0 group-hover:opacity-100 transition-all z-20 focus:outline-none">
-             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </button>
-        <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20 hero-indicators">
-            <button class="w-3 h-3 rounded-full bg-white transition-opacity opacity-100" data-idx="0"></button>
-            <button class="w-3 h-3 rounded-full bg-white transition-opacity opacity-50" data-idx="1"></button>
-            <button class="w-3 h-3 rounded-full bg-white transition-opacity opacity-50" data-idx="2"></button>
-        </div>
+			<div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+				<h1 class="text-[#025157] drop-shadow-sm font-serif text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight">Build your blog. Build your business.</h1>
+				<h4 class="text-gray-800 font-serif text-xl md:text-2xl mb-12 max-w-2xl mx-auto leading-relaxed border-b border-gray-300 pb-8">Instantly publish articles, drive more traffic, grow your email list, and see your blog’s impact on sales.</h4>
 
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-            <h1 class="text-[#025157] drop-shadow-sm font-serif text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight">Build your blog. Build your business.</h1>
-            <h4 class="text-gray-800 font-serif text-xl md:text-2xl mb-12 max-w-2xl mx-auto leading-relaxed border-b border-gray-300 pb-8">Instantly publish articles, drive more traffic, grow your email list, and see your blog’s impact on sales.</h4>
-            
-            <form class="signup-form max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-2 mb-6 group relative">
-                <input type="email" placeholder="Enter email address" required class="w-full sm:w-2/3 px-6 py-4 bg-white/90 backdrop-blur-sm border border-gray-200 focus:border-[#67b54b] focus:ring-1 focus:ring-[#67b54b] rounded-xl shadow-lg outline-none transition duration-300 text-gray-800" />
-                <button type="submit" class="w-full sm:w-1/3 py-4 px-6 bg-[#025157] hover:bg-[#033b3f] text-white font-bold rounded-xl shadow-lg transition-all duration-300 whitespace-nowrap">Try it now &rarr;</button>
-            </form>
-            <p class="text-gray-600 text-sm font-medium leading-relaxed">Start publishing today with a <strong class="text-gray-800">free 7-day trial.</strong><br /><strong class="text-gray-800">No credit card</strong> required.</p>
-        </div>
-    </section>
+				<form class="signup-form max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-2 mb-6 group relative">
+					<input type="email" placeholder="Enter email address" required class="w-full sm:w-2/3 px-6 py-4 bg-white/90 backdrop-blur-sm border border-gray-200 focus:border-[#67b54b] focus:ring-1 focus:ring-[#67b54b] rounded-xl shadow-lg outline-none transition duration-300 text-gray-800" />
+					<button type="submit" class="w-full sm:w-1/3 py-4 px-6 bg-[#025157] hover:bg-[#033b3f] text-white font-bold rounded-xl shadow-lg transition-all duration-300 whitespace-nowrap">Try it now &rarr;</button>
+				</form>
+				<p class="text-gray-600 text-sm font-medium leading-relaxed">Start publishing today with a <strong class="text-gray-800">free 7-day trial.</strong><br /><strong class="text-gray-800">No credit card</strong> required.</p>
+			</div>
+		</section>
 
-    <!-- Main Brands & Intro -->
-    <main class="relative z-20 max-w-6xl mx-auto px-6 text-center transform -translate-y-12">
-        <figure class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center opacity-90 hover:opacity-100 transition duration-300 mb-16">
-            <p class="text-xs uppercase tracking-widest text-[#67b54b] font-bold mb-4">Trusted By</p>
-            <img src="./img/capterra.png" alt="Capterra" class="h-10 object-contain filter grayscale opacity-70 hover:filter-none hover:opacity-100 transition duration-300" />
-        </figure>
-        <figure class="flex justify-center mb-16 group relative perspective-1000">
-            <div class="absolute inset-x-10 bottom-0 top-10 bg-[#025157] rounded-3xl transform translate-y-6 blur-lg opacity-20 group-hover:opacity-30 group-hover:translate-y-8 transition-all duration-500"></div>
-            <img src="./img/intro.png" alt="Intro Matcha" class="w-full max-w-4xl rounded-2xl shadow-2xl relative z-10 transform group-hover:scale-[1.01] transition duration-500 border border-gray-100" />
-        </figure>
-    </main>
+		<!-- Main Brands & Intro -->
+		<main class="relative z-20 max-w-6xl mx-auto px-6 text-center transform -translate-y-12">
+			<figure class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center opacity-90 hover:opacity-100 transition duration-300 mb-16">
+				<p class="text-xs uppercase tracking-widest text-[#67b54b] font-bold mb-4">Trusted By</p>
+				<img src="./img/capterra.png" alt="Capterra" class="h-10 object-contain filter grayscale opacity-70 hover:filter-none hover:opacity-100 transition duration-300" />
+			</figure>
+			<figure class="flex justify-center mb-16 group relative perspective-1000">
+				<div class="absolute inset-x-10 bottom-0 top-10 bg-[#025157] rounded-3xl transform translate-y-6 blur-lg opacity-20 group-hover:opacity-30 group-hover:translate-y-8 transition-all duration-500"></div>
+				<img src="./img/intro.png" alt="Intro Matcha" class="w-full max-w-4xl rounded-2xl shadow-2xl relative z-10 transform group-hover:scale-[1.01] transition duration-500 border border-gray-100" />
+			</figure>
+		</main>
 
-    <!-- Promo Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20">
-        <div class="flex flex-col lg:flex-row items-center gap-16">
-            <article class="w-full lg:w-1/2 flex flex-col items-center relative gap-6">
-                <div class="w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(2,81,87,0.15)] border-4 border-white">
-                    <video controls poster="https://cdn.videvo.net/videvo_files/video/premium/video0036/thumbnails/computer_code00_small.jpg" class="w-full hover:scale-105 transition-transform duration-700">
-                        <source type="video/webm" src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.webm" />
-                        <source type="video/mp4" src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.mp4" />
-                    </video>
-                </div>
-                <img src="./img/intro.png" alt="See how it works" class="w-32 rounded-lg shadow-sm" />
-            </article>
-            <article class="w-full lg:w-1/2">
-                <h3 class="font-serif text-4xl md:text-5xl text-[#025157] font-bold mb-6 leading-tight">Publish to your blog in minutes, not hours.</h3>
-                <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                    Your blog is your most powerful asset to build, engage, and retain a loyal audience. But you don’t have hours to create content that may or may not work. With Matcha, instantly publish from our library of
-                    10,000+ professionally written articles and build your email list faster with our powerful conversion tool.
-                </p>
-                <div class="bg-gray-50/50 border border-gray-200 p-6 rounded-2xl">
-                    <p class="text-[#025157] font-bold mb-3 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-[#67b54b]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Start publishing today:
-                    </p>
-                    <form class="signup-form flex flex-col sm:flex-row gap-3">
-                        <input type="email" placeholder="Enter email" required class="flex-1 px-4 py-3 rounded-lg border border-gray-200 focus:border-[#67b54b] focus:ring-1 focus:ring-[#67b54b] outline-none transition text-gray-800" />
-                        <button type="submit" class="bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors whitespace-nowrap">Start My Trial</button>
-                    </form>
-                </div>
-            </article>
-        </div>
-    </section>
+		<!-- Promo Section -->
+		<section class="max-w-7xl mx-auto px-6 py-20">
+			<div class="flex flex-col lg:flex-row items-center gap-16">
+				<article class="w-full lg:w-1/2 flex flex-col items-center relative gap-6">
+					<div class="w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(2,81,87,0.15)] border-4 border-white">
+						<video controls poster="https://cdn.videvo.net/videvo_files/video/premium/video0036/thumbnails/computer_code00_small.jpg" class="w-full hover:scale-105 transition-transform duration-700">
+							<source type="video/webm" src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.webm" />
+							<source type="video/mp4" src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.mp4" />
+						</video>
+					</div>
+					<img src="./img/intro.png" alt="See how it works" class="w-32 rounded-lg shadow-sm" />
+				</article>
+				<article class="w-full lg:w-1/2">
+					<h3 class="font-serif text-4xl md:text-5xl text-[#025157] font-bold mb-6 leading-tight">Publish to your blog in minutes, not hours.</h3>
+					<p class="text-gray-600 text-lg leading-relaxed mb-8">Your blog is your most powerful asset to build, engage, and retain a loyal audience. But you don’t have hours to create content that may or may not work. With Matcha, instantly publish from our library of 10,000+ professionally written articles and build your email list faster with our powerful conversion tool.</p>
+					<div class="bg-gray-50/50 border border-gray-200 p-6 rounded-2xl">
+						<p class="text-[#025157] font-bold mb-3 flex items-center gap-2">
+							<svg class="w-5 h-5 text-[#67b54b]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+							Start publishing today:
+						</p>
+						<form class="signup-form flex flex-col sm:flex-row gap-3">
+							<input type="email" placeholder="Enter email" required class="flex-1 px-4 py-3 rounded-lg border border-gray-200 focus:border-[#67b54b] focus:ring-1 focus:ring-[#67b54b] outline-none transition text-gray-800" />
+							<button type="submit" class="bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors whitespace-nowrap">Start My Trial</button>
+						</form>
+					</div>
+				</article>
+			</div>
+		</section>
 
-    <!-- Features -->
-    <section class="bg-[#025157] py-24 px-6 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3"></div>
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-            <!-- Card 1 -->
-            <article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
-                <div class="p-8 sm:w-3/5 flex flex-col justify-center">
-                    <img src="./icons/publish.png" class="w-12 h-12 mb-4 drop-shadow-md" />
-                    <h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Fill your blog with engaging articles.</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Publish to your blog in less time than it takes to drink your morning coffee.</p>
-                    <a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors">Publish instantly <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
-                </div>
-                <div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden">
-                    <img src="./img/carousel/carousel-01.jpg" class="absolute inset-0 w-full h-full object-cover object-left transform group-hover:scale-110 transition duration-700" />
-                </div>
-            </article>
-            <!-- Card 2 -->
-            <article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
-                <div class="p-8 sm:w-3/5 flex flex-col justify-center">
-                    <img src="./icons/site_traffic.png" class="w-12 h-12 mb-4 drop-shadow-md" />
-                    <h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Attract and engage more website visitors.</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Enhance your email, social media channels, and paid ads with content from Matcha.</p>
-                    <a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors">Get more site traffic <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
-                </div>
-                <div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden">
-                    <img src="./img/carousel/carousel-02.jpg" class="absolute inset-0 w-full h-full object-cover object-left transform group-hover:scale-110 transition duration-700" />
-                </div>
-            </article>
-            <!-- Card 3 -->
-            <article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
-                <div class="p-8 sm:w-3/5 flex flex-col justify-center">
-                    <img src="./icons/capture.png" class="w-12 h-12 mb-4 drop-shadow-md" />
-                    <h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Capture more emails with locked content.</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Convert 10x more of your traffic into subscribers and nurture them to a sale.</p>
-                    <a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors">Grow your email list faster <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
-                </div>
-                <div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden">
-                    <img src="./img/carousel/carousel-03.jpg" class="absolute inset-0 w-full h-full object-cover object-left transform group-hover:scale-110 transition duration-700" />
-                </div>
-            </article>
-            <!-- Card 4 -->
-            <article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
-                <div class="p-8 sm:w-3/5 flex flex-col justify-center">
-                    <img src="./icons/roi.png" class="w-12 h-12 mb-4 drop-shadow-md" />
-                    <h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Optimize your blog’s performance.</h3>
-                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed">See what content delivers the most traffic, engagement, email subscribers, and sales.</p>
-                    <a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors">See content’s ROI <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
-                </div>
-                <div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden bg-white flex items-center justify-center p-6">
-                    <img src="./img/intro.png" class="w-full h-auto object-contain drop-shadow-lg transform group-hover:scale-105 transition duration-500" />
-                </div>
-            </article>
-        </div>
-    </section>
+		<!-- Features -->
+		<section class="bg-[#025157] py-24 px-6 relative overflow-hidden">
+			<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
+			<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3"></div>
+			<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+				<!-- Card 1 -->
+				<article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
+					<div class="p-8 sm:w-3/5 flex flex-col justify-center">
+						<img src="./icons/publish.png" class="w-12 h-12 mb-4 drop-shadow-md" />
+						<h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Fill your blog with engaging articles.</h3>
+						<p class="text-gray-600 mb-6 flex-grow leading-relaxed">Publish to your blog in less time than it takes to drink your morning coffee.</p>
+						<a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors"
+							>Publish instantly <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg
+						></a>
+					</div>
+					<div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden">
+						<img src="./img/carousel/carousel-01.jpg" class="absolute inset-0 w-full h-full object-cover object-left transform group-hover:scale-110 transition duration-700" />
+					</div>
+				</article>
+				<!-- Card 2 -->
+				<article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
+					<div class="p-8 sm:w-3/5 flex flex-col justify-center">
+						<img src="./icons/site_traffic.png" class="w-12 h-12 mb-4 drop-shadow-md" />
+						<h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Attract and engage more website visitors.</h3>
+						<p class="text-gray-600 mb-6 flex-grow leading-relaxed">Enhance your email, social media channels, and paid ads with content from Matcha.</p>
+						<a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors"
+							>Get more site traffic <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg
+						></a>
+					</div>
+					<div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden">
+						<img src="./img/carousel/carousel-02.jpg" class="absolute inset-0 w-full h-full object-cover object-left transform group-hover:scale-110 transition duration-700" />
+					</div>
+				</article>
+				<!-- Card 3 -->
+				<article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
+					<div class="p-8 sm:w-3/5 flex flex-col justify-center">
+						<img src="./icons/capture.png" class="w-12 h-12 mb-4 drop-shadow-md" />
+						<h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Capture more emails with locked content.</h3>
+						<p class="text-gray-600 mb-6 flex-grow leading-relaxed">Convert 10x more of your traffic into subscribers and nurture them to a sale.</p>
+						<a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors"
+							>Grow your email list faster <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg
+						></a>
+					</div>
+					<div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden">
+						<img src="./img/carousel/carousel-03.jpg" class="absolute inset-0 w-full h-full object-cover object-left transform group-hover:scale-110 transition duration-700" />
+					</div>
+				</article>
+				<!-- Card 4 -->
+				<article class="bg-gray-100/95 backdrop-blur rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row group transition-transform duration-300 hover:-translate-y-1 border-t border-white/20">
+					<div class="p-8 sm:w-3/5 flex flex-col justify-center">
+						<img src="./icons/roi.png" class="w-12 h-12 mb-4 drop-shadow-md" />
+						<h3 class="text-2xl text-gray-800 font-bold mb-3 leading-snug font-serif">Optimize your blog’s performance.</h3>
+						<p class="text-gray-600 mb-6 flex-grow leading-relaxed">See what content delivers the most traffic, engagement, email subscribers, and sales.</p>
+						<a href="#" class="text-[#67b54b] font-bold hover:text-[#52933a] inline-flex items-center gap-1 transition-colors"
+							>See content’s ROI <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg
+						></a>
+					</div>
+					<div class="sm:w-2/5 relative h-48 sm:h-auto overflow-hidden bg-white flex items-center justify-center p-6">
+						<img src="./img/intro.png" class="w-full h-auto object-contain drop-shadow-lg transform group-hover:scale-105 transition duration-500" />
+					</div>
+				</article>
+			</div>
+		</section>
 
-    <!-- Success Stories -->
-    <section class="bg-gradient-to-br from-[#a1d683] to-[#86c066] py-24 px-6 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-            <article class="lg:w-1/3 text-center lg:text-left">
-                <h2 class="font-serif text-5xl text-[#025157] font-black leading-tight mb-6">Growing ecommerce brands rely on Matcha.</h2>
-                <p class="text-gray-800 text-lg mb-8 font-medium">
-                    Are you tired of wasting time publishing blog articles to only see a trickle of traffic and no impact on sales? Join hundreds of business
-                    owners and ecommerce marketers who rely on Matcha for quality content and consistent performance from their blogs.
-                </p>
-                <button class="bg-white/90 backdrop-blur text-[#025157] hover:bg-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all mb-10 w-full md:w-auto hover:-translate-y-1">
-                    Who Uses Matcha?
-                </button>
-                <figure class="flex justify-center lg:justify-start">
-                    <img src="./img/brands.png" alt="Brands" class="w-full max-w-xs opacity-80 hover:opacity-100 transition-opacity" />
-                </figure>
-            </article>
-            <article class="lg:w-2/3 w-full relative" id="stories-carousel">
-                <div class="relative w-full max-w-sm mx-auto lg:mx-0 h-[520px]">
-                    <!-- Story Card 1 -->
-                    <div class="story-item absolute inset-0 w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col transition-all duration-700 opacity-100 z-10 scale-100 border border-white/60">
-                        <div class="relative h-[220px]">
-                            <img src="./img/avatar.png" alt="Everly worker" class="w-full h-full object-cover" />
-                            <div class="absolute -bottom-10 right-6 w-20 h-20 bg-[#f9da73] rounded-full border-4 border-white flex items-center justify-center shadow-lg">
-                                <img src="./img/intro.png" alt="Everly" class="w-12 object-contain" />
-                            </div>
-                        </div>
-                        <div class="p-8 flex-grow flex flex-col pt-12">
-                            <h4 class="text-[#025157] font-bold mb-2 uppercase text-xs tracking-wider">Everly</h4>
-                            <h3 class="text-2xl text-gray-800 font-serif leading-tight mb-6 flex-grow">
-                                Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce Revenue 20%
-                            </h3>
-                            <div class="flex items-center text-gray-500 text-sm font-medium border-t border-gray-100 pt-6">
-                                <img src="./icons/roi.png" alt="Icon" class="w-8 h-8 mr-3 opacity-80" />
-                                <p>22% of monthly revenue influenced by content</p>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-gray-50/50 uppercase">
-                            <button class="w-full py-3 text-[#025157] bg-white border border-[#025157]/20 hover:bg-[#025157]/5 hover:border-[#025157]/40 rounded-xl font-bold transition-all">See Case Study</button>
-                        </div>
-                    </div>
-                    <!-- Story Card 2 -->
-                    <div class="story-item absolute inset-0 w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col transition-all duration-700 opacity-0 z-0 scale-95 pointer-events-none border border-white/60">
-                        <div class="relative h-[220px]">
-                            <img src="./img/avatar.png" alt="Sea to Summit" class="w-full h-full object-cover filter brightness-90" />
-                            <div class="absolute -bottom-10 right-6 w-20 h-20 bg-[#f9da73] rounded-full border-4 border-white flex items-center justify-center shadow-lg">
-                                <img src="./img/intro.png" alt="Sea to Summit" class="w-12 object-contain" />
-                            </div>
-                        </div>
-                        <div class="p-8 flex-grow flex flex-col pt-12">
-                            <h4 class="text-[#025157] font-bold mb-2 uppercase text-xs tracking-wider">Sea to Summit</h4>
-                            <h3 class="text-2xl text-gray-800 font-serif leading-tight mb-6 flex-grow">
-                                Sea to Summit’s Ecommerce Site Traffic Climbs 189%, New Subscribers 820%
-                            </h3>
-                            <div class="flex items-center text-gray-500 text-sm font-medium border-t border-gray-100 pt-6">
-                                <img src="./icons/site_traffic.png" alt="Icon" class="w-8 h-8 mr-3 opacity-80" />
-                                <p>500% increase in traffic from social media</p>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-gray-50/50 uppercase">
-                            <button class="w-full py-3 text-[#025157] bg-white border border-[#025157]/20 hover:bg-[#025157]/5 hover:border-[#025157]/40 rounded-xl font-bold transition-all">See Case Study</button>
-                        </div>
-                    </div>
-                     <!-- Story Card 3 -->
-                    <div class="story-item absolute inset-0 w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col transition-all duration-700 opacity-0 z-0 scale-95 pointer-events-none border border-white/60">
-                        <div class="relative h-[220px]">
-                            <img src="./img/avatar.png" alt="Mambe" class="w-full h-full object-cover filter contrast-125" />
-                            <div class="absolute -bottom-10 right-6 w-20 h-20 bg-[#f9da73] rounded-full border-4 border-white flex items-center justify-center shadow-lg">
-                                <img src="./img/intro.png" alt="Mambe" class="w-12 object-contain" />
-                            </div>
-                        </div>
-                        <div class="p-8 flex-grow flex flex-col pt-12">
-                            <h4 class="text-[#025157] font-bold mb-2 uppercase text-xs tracking-wider">Mambe Waterproof Blankets</h4>
-                            <h3 class="text-2xl text-gray-800 font-serif leading-tight mb-6 flex-grow">
-                                How Mambe Increased Conversions by 327%, Reduced CPL by 60%
-                            </h3>
-                            <div class="flex items-center text-gray-500 text-sm font-medium border-t border-gray-100 pt-6">
-                                <img src="./icons/roi.png" alt="Icon" class="w-8 h-8 mr-3 opacity-80" />
-                                <p>+327% more popup conversions at a 60% lower cost</p>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-gray-50/50 uppercase">
-                            <button class="w-full py-3 text-[#025157] bg-white border border-[#025157]/20 hover:bg-[#025157]/5 hover:border-[#025157]/40 rounded-xl font-bold transition-all">See Case Study</button>
-                        </div>
-                    </div>
-                </div>
-                
-                 <!-- Success Controls -->
-                 <div class="flex justify-center mt-8 gap-6 z-20 relative">
-                     <button class="story-prev bg-white hover:bg-white text-[#025157] shadow w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-105 active:scale-95 focus:outline-none">
-                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                     </button>
-                     <div class="flex items-center gap-3 story-indicators">
-                         <button class="w-2.5 h-2.5 rounded-full bg-[#025157] transition-colors focus:outline-none" data-idx="0"></button>
-                         <button class="w-2.5 h-2.5 rounded-full bg-[#025157]/30 transition-colors focus:outline-none" data-idx="1"></button>
-                         <button class="w-2.5 h-2.5 rounded-full bg-[#025157]/30 transition-colors focus:outline-none" data-idx="2"></button>
-                     </div>
-                     <button class="story-next bg-white hover:bg-white text-[#025157] shadow w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-105 active:scale-95 focus:outline-none">
-                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                     </button>
-                 </div>
-            </article>
-        </div>
-    </section>
+		<!-- Success Stories -->
+		<section class="bg-gradient-to-br from-[#a1d683] to-[#86c066] py-24 px-6 relative overflow-hidden">
+			<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+				<article class="lg:w-1/3 text-center lg:text-left">
+					<h2 class="font-serif text-5xl text-[#025157] font-black leading-tight mb-6">Growing ecommerce brands rely on Matcha.</h2>
+					<p class="text-gray-800 text-lg mb-8 font-medium">Are you tired of wasting time publishing blog articles to only see a trickle of traffic and no impact on sales? Join hundreds of business owners and ecommerce marketers who rely on Matcha for quality content and consistent performance from their blogs.</p>
+					<button class="bg-white/90 backdrop-blur text-[#025157] hover:bg-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all mb-10 w-full md:w-auto hover:-translate-y-1">Who Uses Matcha?</button>
+					<figure class="flex justify-center lg:justify-start">
+						<img src="./img/brands.png" alt="Brands" class="w-full max-w-xs opacity-80 hover:opacity-100 transition-opacity" />
+					</figure>
+				</article>
+				<article class="lg:w-2/3 w-full relative" id="stories-carousel">
+					<div class="relative w-full max-w-sm mx-auto lg:mx-0 h-[520px]">
+						<!-- Story Card 1 -->
+						<div class="story-item absolute inset-0 w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col transition-all duration-700 opacity-100 z-10 scale-100 border border-white/60">
+							<div class="relative h-[220px]">
+								<img src="./img/avatar.png" alt="Everly worker" class="w-full h-full object-cover" />
+								<div class="absolute -bottom-10 right-6 w-20 h-20 bg-[#f9da73] rounded-full border-4 border-white flex items-center justify-center shadow-lg">
+									<img src="./img/intro.png" alt="Everly" class="w-12 object-contain" />
+								</div>
+							</div>
+							<div class="p-8 flex-grow flex flex-col pt-12">
+								<h4 class="text-[#025157] font-bold mb-2 uppercase text-xs tracking-wider">Everly</h4>
+								<h3 class="text-2xl text-gray-800 font-serif leading-tight mb-6 flex-grow">Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce Revenue 20%</h3>
+								<div class="flex items-center text-gray-500 text-sm font-medium border-t border-gray-100 pt-6">
+									<img src="./icons/roi.png" alt="Icon" class="w-8 h-8 mr-3 opacity-80" />
+									<p>22% of monthly revenue influenced by content</p>
+								</div>
+							</div>
+							<div class="p-6 bg-gray-50/50 uppercase">
+								<button class="w-full py-3 text-[#025157] bg-white border border-[#025157]/20 hover:bg-[#025157]/5 hover:border-[#025157]/40 rounded-xl font-bold transition-all">See Case Study</button>
+							</div>
+						</div>
+						<!-- Story Card 2 -->
+						<div class="story-item absolute inset-0 w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col transition-all duration-700 opacity-0 z-0 scale-95 pointer-events-none border border-white/60">
+							<div class="relative h-[220px]">
+								<img src="./img/avatar.png" alt="Sea to Summit" class="w-full h-full object-cover filter brightness-90" />
+								<div class="absolute -bottom-10 right-6 w-20 h-20 bg-[#f9da73] rounded-full border-4 border-white flex items-center justify-center shadow-lg">
+									<img src="./img/intro.png" alt="Sea to Summit" class="w-12 object-contain" />
+								</div>
+							</div>
+							<div class="p-8 flex-grow flex flex-col pt-12">
+								<h4 class="text-[#025157] font-bold mb-2 uppercase text-xs tracking-wider">Sea to Summit</h4>
+								<h3 class="text-2xl text-gray-800 font-serif leading-tight mb-6 flex-grow">Sea to Summit’s Ecommerce Site Traffic Climbs 189%, New Subscribers 820%</h3>
+								<div class="flex items-center text-gray-500 text-sm font-medium border-t border-gray-100 pt-6">
+									<img src="./icons/site_traffic.png" alt="Icon" class="w-8 h-8 mr-3 opacity-80" />
+									<p>500% increase in traffic from social media</p>
+								</div>
+							</div>
+							<div class="p-6 bg-gray-50/50 uppercase">
+								<button class="w-full py-3 text-[#025157] bg-white border border-[#025157]/20 hover:bg-[#025157]/5 hover:border-[#025157]/40 rounded-xl font-bold transition-all">See Case Study</button>
+							</div>
+						</div>
+						<!-- Story Card 3 -->
+						<div class="story-item absolute inset-0 w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col transition-all duration-700 opacity-0 z-0 scale-95 pointer-events-none border border-white/60">
+							<div class="relative h-[220px]">
+								<img src="./img/avatar.png" alt="Mambe" class="w-full h-full object-cover filter contrast-125" />
+								<div class="absolute -bottom-10 right-6 w-20 h-20 bg-[#f9da73] rounded-full border-4 border-white flex items-center justify-center shadow-lg">
+									<img src="./img/intro.png" alt="Mambe" class="w-12 object-contain" />
+								</div>
+							</div>
+							<div class="p-8 flex-grow flex flex-col pt-12">
+								<h4 class="text-[#025157] font-bold mb-2 uppercase text-xs tracking-wider">Mambe Waterproof Blankets</h4>
+								<h3 class="text-2xl text-gray-800 font-serif leading-tight mb-6 flex-grow">How Mambe Increased Conversions by 327%, Reduced CPL by 60%</h3>
+								<div class="flex items-center text-gray-500 text-sm font-medium border-t border-gray-100 pt-6">
+									<img src="./icons/roi.png" alt="Icon" class="w-8 h-8 mr-3 opacity-80" />
+									<p>+327% more popup conversions at a 60% lower cost</p>
+								</div>
+							</div>
+							<div class="p-6 bg-gray-50/50 uppercase">
+								<button class="w-full py-3 text-[#025157] bg-white border border-[#025157]/20 hover:bg-[#025157]/5 hover:border-[#025157]/40 rounded-xl font-bold transition-all">See Case Study</button>
+							</div>
+						</div>
+					</div>
 
-    <!-- How does it work -->
-    <section class="max-w-7xl mx-auto px-6 py-24 text-center relative">
-        <h2 class="font-serif text-5xl text-[#025157] font-bold mb-6">How does Matcha work?</h2>
-        <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
-            Your blog can be so much more than window dressing. Use Matcha’s
-            <a href="#" class="text-[#67b54b] font-bold hover:underline">simple formula</a> to transform your blog into an ecommerce growth engine.
-        </p>
-        <button class="bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-3.5 px-8 rounded-xl shadow-lg transition-transform hover:-translate-y-1 mb-20 whitespace-nowrap">Explore the Platform</button>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-            <!-- Step 1 -->
-            <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
-                <div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
-                    <img src="./img/intro.png" alt="Publish" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
-                    <img src="./icons/publish.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
-                </div>
-                <div class="p-8 h-[220px] flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Publish</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed text-center font-medium">Effortlessly fill your blog with content that shoppers want to read.</p>
-                    </div>
-                    <a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Publish instantly &rarr;</a>
-                </div>
-            </article>
-             <!-- Step 2 -->
-             <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
-                <div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
-                    <img src="./img/intro.png" alt="Promote" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
-                    <img src="./icons/site_traffic.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
-                </div>
-                <div class="p-8 h-[220px] flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Promote</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed text-center font-medium">Use articles in email, social, and content ads to attract more site visitors.</p>
-                    </div>
-                    <a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Drive site visitors &rarr;</a>
-                </div>
-            </article>
-             <!-- Step 3 -->
-             <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
-                <div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
-                    <img src="./img/intro.png" alt="Capture" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
-                    <img src="./icons/capture.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
-                </div>
-                <div class="p-8 h-[220px] flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Capture</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed text-center font-medium">Turn readers into email subscribers and subscribers into customers.</p>
-                    </div>
-                    <a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Grow your email list &rarr;</a>
-                </div>
-            </article>
-             <!-- Step 4 -->
-             <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
-                <div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
-                    <img src="./img/intro.png" alt="Measure" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
-                    <img src="./icons/roi.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
-                </div>
-                <div class="p-8 h-[220px] flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Measure</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed text-center font-medium">See what’s working and what’s not to easily optimize for more traffic, email subscribers, and sales.</p>
-                    </div>
-                    <a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Track performance &rarr;</a>
-                </div>
-            </article>
-        </div>
-    </section>
+					<!-- Success Controls -->
+					<div class="flex justify-center mt-8 gap-6 z-20 relative">
+						<button class="story-prev bg-white hover:bg-white text-[#025157] shadow w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-105 active:scale-95 focus:outline-none">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+						</button>
+						<div class="flex items-center gap-3 story-indicators">
+							<button class="w-2.5 h-2.5 rounded-full bg-[#025157] transition-colors focus:outline-none" data-idx="0"></button>
+							<button class="w-2.5 h-2.5 rounded-full bg-[#025157]/30 transition-colors focus:outline-none" data-idx="1"></button>
+							<button class="w-2.5 h-2.5 rounded-full bg-[#025157]/30 transition-colors focus:outline-none" data-idx="2"></button>
+						</div>
+						<button class="story-next bg-white hover:bg-white text-[#025157] shadow w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-105 active:scale-95 focus:outline-none">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+						</button>
+					</div>
+				</article>
+			</div>
+		</section>
 
-    <!-- Blog Section -->
-    <section class="bg-white py-24 px-6 md:px-12 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
-            <div class="lg:w-1/3">
-                <h2 class="font-serif text-4xl text-[#025157] font-bold mb-10 leading-tight">Learn how to grow your ecommerce business.</h2>
-                <div class="space-y-8 mb-12">
-                    <div class="flex items-center gap-6 group cursor-pointer bg-gray-50 hover:bg-white p-4 rounded-2xl transition-all hover:shadow-md border border-transparent hover:border-gray-100">
-                        <div class="w-16 h-16 bg-white group-hover:bg-[#67b54b]/10 rounded-xl flex items-center justify-center transition-colors shadow-sm">
-                            <img src="./icons/publish.png" class="w-10 h-10 object-contain shadow-sm rounded bg-white" />
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-2xl text-[#025157] font-bold mb-1 group-hover:text-[#67b54b] transition-colors">Build</h3>
-                            <p class="text-[#135359] font-medium">and scale your ecommerce store</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-6 group cursor-pointer bg-gray-50 hover:bg-white p-4 rounded-2xl transition-all hover:shadow-md border border-transparent hover:border-gray-100">
-                        <div class="w-16 h-16 bg-white group-hover:bg-[#67b54b]/10 rounded-xl flex items-center justify-center transition-colors shadow-sm">
-                            <img src="./icons/site_traffic.png" class="w-10 h-10 object-contain shadow-sm rounded bg-white" />
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-2xl text-[#025157] font-bold mb-1 group-hover:text-[#67b54b] transition-colors">Attract</h3>
-                            <p class="text-[#135359] font-medium">your target audience and grow site traffic</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-6 group cursor-pointer bg-gray-50 hover:bg-white p-4 rounded-2xl transition-all hover:shadow-md border border-transparent hover:border-gray-100">
-                        <div class="w-16 h-16 bg-white group-hover:bg-[#67b54b]/10 rounded-xl flex items-center justify-center transition-colors shadow-sm">
-                            <img src="./icons/roi.png" class="w-10 h-10 object-contain shadow-sm rounded bg-white" />
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-2xl text-[#025157] font-bold mb-1 group-hover:text-[#67b54b] transition-colors">Convert</h3>
-                            <p class="text-[#135359] font-medium">readers to subscribers and customers</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="w-full sm:w-auto bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1">Read the blog</button>
-            </div>
-            
-            <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <!-- Post 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border border-gray-100 flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-2">
-                    <div class="h-56 relative overflow-hidden bg-gray-200">
-                        <img src="./img/carousel/carousel-01.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <p class="text-xs font-bold text-[#67b54b] mb-4 uppercase tracking-widest flex items-center gap-2">
-                            Performance <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span> 21 min
-                        </p>
-                        <h5 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#025157] transition-colors leading-snug line-clamp-2">
-                            Ecommerce Blogging: The 2020 Guide for Online Stores and DTC Brands
-                        </h5>
-                        <p class="text-gray-600 mb-8 flex-grow line-clamp-3 leading-relaxed">
-                            Table of ContentsWhy Ecommerce Businesses Need a Blog in 2020Document Your Ecommerce Blog StrategyPublication: How to Create High-Performing Blog ContentDistribution:...
-                        </p>
-                        <div class="flex items-center gap-4 pt-6 border-t border-gray-100 mt-auto">
-                            <img src="./img/avatar.png" class="w-12 h-12 rounded-full border-2 border-white shadow-md object-cover" />
-                            <div>
-                                <p class="font-bold text-gray-800 text-sm">Shauna Ward</p>
-                                <p class="text-xs text-gray-500 font-medium">Bedu Contributor</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Post 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border border-gray-100 flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-2">
-                    <div class="h-56 relative overflow-hidden bg-gray-200">
-                        <img src="./img/carousel/carousel-02.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
-                         <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <p class="text-xs font-bold text-[#67b54b] mb-4 uppercase tracking-widest flex items-center gap-2">
-                            Performance <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span> 6 min
-                        </p>
-                        <h5 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#025157] transition-colors leading-snug line-clamp-2">
-                            What Is Licensed Content and How Does It Help Your Business Grow?
-                        </h5>
-                        <p class="text-gray-600 mb-8 flex-grow line-clamp-3 leading-relaxed">
-                            TL;DR: Licensed content, sometimes called syndicated content, is content produced by a professional publisher that can be legally licensed for...
-                        </p>
-                        <div class="flex items-center gap-4 pt-6 border-t border-gray-100 mt-auto">
-                            <img src="./img/avatar.png" class="w-12 h-12 rounded-full border-2 border-white shadow-md object-cover" />
-                             <div>
-                                <p class="font-bold text-gray-800 text-sm">Rob Glover</p>
-                                <p class="text-xs text-gray-500 font-medium">Bedu Editor</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<!-- How does it work -->
+		<section class="max-w-7xl mx-auto px-6 py-24 text-center relative">
+			<h2 class="font-serif text-5xl text-[#025157] font-bold mb-6">How does Matcha work?</h2>
+			<p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+				Your blog can be so much more than window dressing. Use Matcha’s
+				<a href="#" class="text-[#67b54b] font-bold hover:underline">simple formula</a> to transform your blog into an ecommerce growth engine.
+			</p>
+			<button class="bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-3.5 px-8 rounded-xl shadow-lg transition-transform hover:-translate-y-1 mb-20 whitespace-nowrap">Explore the Platform</button>
 
-    <!-- Call to Actions -->
-    <div class="h-[400px] bg-center bg-cover bg-no-repeat relative fixed-bg" style="background-image: url('https://getmatcha.com/wp-content/themes/getmatcha/css/../img/home_people.png');">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#fffbf7]/50 to-white/10 backdrop-blur-[2px]"></div>
-    </div>
-    
-    <div class="bg-[#96d178] px-6 py-16 text-center transform -translate-y-24 mx-4 md:mx-auto max-w-5xl rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(150,209,120,0.4)] border border-white/40 backdrop-blur-md relative z-10 overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-         <div class="absolute bottom-0 left-0 w-64 h-64 bg-black/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
-        <h2 class="relative z-10 font-serif text-5xl md:text-6xl text-[#025157] font-black mb-8 tracking-tight drop-shadow-sm">Try Matcha free for 7 days.</h2>
-        <form class="signup-form max-w-xl mx-auto flex flex-col md:flex-row gap-3 mb-6 relative z-10">
-            <input type="email" placeholder="Enter email address" required class="flex-grow px-6 py-4 rounded-2xl border-none focus:ring-4 focus:ring-[#025157]/20 outline-none shadow-inner text-gray-800 font-medium w-full" />
-            <button class="bg-[#025157] hover:bg-[#042A2D] text-white font-bold py-4 px-10 rounded-2xl shadow-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 whitespace-nowrap w-full md:w-auto">Sign Up Free &rarr;</button>
-        </form>
-        <p class="relative z-10 text-[#025157]/90 font-medium leading-relaxed max-w-sm mx-auto">
-            Start publishing today with a free 7-day trial. <br />
-            <strong>No credit card</strong> required.
-        </p>
-    </div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+				<!-- Step 1 -->
+				<article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
+					<div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
+						<img src="./img/intro.png" alt="Publish" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
+						<img src="./icons/publish.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
+					</div>
+					<div class="p-8 h-[220px] flex flex-col justify-between">
+						<div>
+							<h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Publish</h3>
+							<p class="text-gray-600 text-sm leading-relaxed text-center font-medium">Effortlessly fill your blog with content that shoppers want to read.</p>
+						</div>
+						<a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Publish instantly &rarr;</a>
+					</div>
+				</article>
+				<!-- Step 2 -->
+				<article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
+					<div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
+						<img src="./img/intro.png" alt="Promote" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
+						<img src="./icons/site_traffic.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
+					</div>
+					<div class="p-8 h-[220px] flex flex-col justify-between">
+						<div>
+							<h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Promote</h3>
+							<p class="text-gray-600 text-sm leading-relaxed text-center font-medium">Use articles in email, social, and content ads to attract more site visitors.</p>
+						</div>
+						<a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Drive site visitors &rarr;</a>
+					</div>
+				</article>
+				<!-- Step 3 -->
+				<article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
+					<div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
+						<img src="./img/intro.png" alt="Capture" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
+						<img src="./icons/capture.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
+					</div>
+					<div class="p-8 h-[220px] flex flex-col justify-between">
+						<div>
+							<h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Capture</h3>
+							<p class="text-gray-600 text-sm leading-relaxed text-center font-medium">Turn readers into email subscribers and subscribers into customers.</p>
+						</div>
+						<a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Grow your email list &rarr;</a>
+					</div>
+				</article>
+				<!-- Step 4 -->
+				<article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100/50">
+					<div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center shrink-0 border-b border-gray-100">
+						<img src="./img/intro.png" alt="Measure" class="absolute w-full h-full object-cover opacity-20 filter blur-sm transform scale-110 group-hover:scale-125 transition duration-700" />
+						<img src="./icons/roi.png" alt="Icon" class="w-16 h-16 relative z-10 drop-shadow-xl transform group-hover:scale-110 transition duration-300" />
+					</div>
+					<div class="p-8 h-[220px] flex flex-col justify-between">
+						<div>
+							<h3 class="font-serif text-3xl text-[#025157] mb-3 text-center font-bold">Measure</h3>
+							<p class="text-gray-600 text-sm leading-relaxed text-center font-medium">See what’s working and what’s not to easily optimize for more traffic, email subscribers, and sales.</p>
+						</div>
+						<a href="#" class="text-[#67b54b] font-bold text-center block hover:text-[#52933a] transition-colors uppercase text-sm tracking-wide">Track performance &rarr;</a>
+					</div>
+				</article>
+			</div>
+		</section>
 
-    <section class="max-w-6xl mx-auto px-6 mb-24 relative -mt-8">
-        <div class="bg-gradient-to-br from-[#025157] to-[#043b40] rounded-3xl p-10 md:p-16 shadow-2xl flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
-             <div class="absolute top-0 right-0 w-full h-full bg-[url('./icons/capture.png')] bg-no-repeat bg-right-top opacity-5 mix-blend-overlay pointer-events-none filter scale-150"></div>
-            <div class="md:w-1/2 relative z-10">
-                <h2 class="font-serif text-4xl lg:text-5xl text-white font-bold mb-6 leading-tight">Try free for 7 days. Publish your first article today!</h2>
-                <p class="text-white/80 text-lg">Want to learn more? <a href="#" class="text-[#6abf4b] font-bold hover:text-[#96d178] transition-colors pb-1 border-b-2 border-transparent hover:border-[#96d178]">Schedule a demo &rarr;</a></p>
-            </div>
-            <div class="md:w-1/2 w-full relative z-10">
-                <form class="signup-form flex flex-col gap-3 relative bg-white/10 p-2 text-white rounded-2xl backdrop-blur-sm border border-white/10">
-                    <input type="email" placeholder="Enter email address" value="vitofirulito@gmail.com" class="w-full px-5 py-4 rounded-xl mb-2 text-gray-800 border-none focus:ring-4 focus:ring-[#6abf4b]/30 outline-none shadow-inner font-medium bg-white" />
-                    <button class="w-full bg-[#67b54b] hover:bg-[#52933a] text-white font-bold py-4 rounded-xl shadow-lg transition-transform hover:-translate-y-0.5">Sign Up Free &rarr;</button>
-                </form>
-                <p class="text-[#b3cbcd] mt-6 text-sm leading-relaxed max-w-md mx-auto md:mx-0 font-medium text-center md:text-left">
-                    Access Matcha’s content marketing platform free for 7 days. No credit card required.
-                </p>
-            </div>
-        </div>
-    </section>
+		<!-- Blog Section -->
+		<section class="bg-white py-24 px-6 md:px-12 border-t border-gray-100">
+			<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+				<div class="lg:w-1/3">
+					<h2 class="font-serif text-4xl text-[#025157] font-bold mb-10 leading-tight">Learn how to grow your ecommerce business.</h2>
+					<div class="space-y-8 mb-12">
+						<div class="flex items-center gap-6 group cursor-pointer bg-gray-50 hover:bg-white p-4 rounded-2xl transition-all hover:shadow-md border border-transparent hover:border-gray-100">
+							<div class="w-16 h-16 bg-white group-hover:bg-[#67b54b]/10 rounded-xl flex items-center justify-center transition-colors shadow-sm">
+								<img src="./icons/publish.png" class="w-10 h-10 object-contain shadow-sm rounded bg-white" />
+							</div>
+							<div>
+								<h3 class="font-serif text-2xl text-[#025157] font-bold mb-1 group-hover:text-[#67b54b] transition-colors">Build</h3>
+								<p class="text-[#135359] font-medium">and scale your ecommerce store</p>
+							</div>
+						</div>
+						<div class="flex items-center gap-6 group cursor-pointer bg-gray-50 hover:bg-white p-4 rounded-2xl transition-all hover:shadow-md border border-transparent hover:border-gray-100">
+							<div class="w-16 h-16 bg-white group-hover:bg-[#67b54b]/10 rounded-xl flex items-center justify-center transition-colors shadow-sm">
+								<img src="./icons/site_traffic.png" class="w-10 h-10 object-contain shadow-sm rounded bg-white" />
+							</div>
+							<div>
+								<h3 class="font-serif text-2xl text-[#025157] font-bold mb-1 group-hover:text-[#67b54b] transition-colors">Attract</h3>
+								<p class="text-[#135359] font-medium">your target audience and grow site traffic</p>
+							</div>
+						</div>
+						<div class="flex items-center gap-6 group cursor-pointer bg-gray-50 hover:bg-white p-4 rounded-2xl transition-all hover:shadow-md border border-transparent hover:border-gray-100">
+							<div class="w-16 h-16 bg-white group-hover:bg-[#67b54b]/10 rounded-xl flex items-center justify-center transition-colors shadow-sm">
+								<img src="./icons/roi.png" class="w-10 h-10 object-contain shadow-sm rounded bg-white" />
+							</div>
+							<div>
+								<h3 class="font-serif text-2xl text-[#025157] font-bold mb-1 group-hover:text-[#67b54b] transition-colors">Convert</h3>
+								<p class="text-[#135359] font-medium">readers to subscribers and customers</p>
+							</div>
+						</div>
+					</div>
+					<button class="w-full sm:w-auto bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1">Read the blog</button>
+				</div>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-100 py-20 px-6 md:px-12 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20 border-b border-gray-200 pb-20">
-            <div class="lg:col-span-4">
-                <h2 class="font-serif text-3xl text-[#025157] font-bold mb-4 drop-shadow-sm">Subscribe to our newsletter</h2>
-                <p class="text-gray-500 font-medium mb-8 leading-relaxed">Become a content marketing expert, subscribe to the newsletter.</p>
-                <form class="signup-form flex flex-col sm:flex-row gap-3">
-                    <input type="email" placeholder="Email address" required class="flex-1 px-5 py-3.5 rounded-xl border border-gray-200 focus:border-[#67b54b] focus:ring-2 focus:ring-[#67b54b]/20 outline-none transition-all shadow-sm text-gray-800 bg-gray-50/50" />
-                    <button class="bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-colors w-full sm:w-auto">Subscribe &rarr;</button>
-                </form>
-            </div>
-            <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-                <div>
-                    <h4 class="uppercase text-xs font-bold text-[#025157] tracking-widest mb-6 opacity-80 border-b border-gray-100 pb-4 inline-block">Platform</h4>
-                    <ul class="space-y-4 text-gray-600 font-medium">
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Pricing</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Publish</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Distribute</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Measure</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Integrations</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="uppercase text-xs font-bold text-[#025157] tracking-widest mb-6 opacity-80 border-b border-gray-100 pb-4 inline-block">Matcha</h4>
-                    <ul class="space-y-4 text-gray-600 font-medium">
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>About</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Story</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Team</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Careers</a></li>
-                    </ul>
-                </div>
-                <div class="col-span-2 md:col-span-1 border-t md:border-t-0 border-gray-100 pt-8 md:pt-0">
-                    <h4 class="uppercase text-xs font-bold text-[#025157] tracking-widest mb-6 opacity-80 border-b border-gray-100 pb-4 inline-block">Legal</h4>
-                    <ul class="space-y-4 text-gray-600 font-medium flex flex-wrap md:flex-col gap-6 md:gap-0">
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Privacy</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Terms</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Support</a></li>
-                        <li><a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-10">
-                <a href="#"><img src="./img/logo.png" alt="Matcha" class="h-9 w-auto mix-blend-multiply opacity-90 hover:opacity-100 transition-opacity drop-shadow-sm" /></a>
-                <div class="flex items-center gap-3">
-                    <a href="https://www.instagram.com/matchacontent" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#67b54b] hover:-translate-y-1 hover:shadow-lg transition-all group">
-                        <img src="icons/instagram.svg" alt="IG" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
-                    </a>
-                    <a href="https://twitter.com/matchacontent" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#6abf4b] hover:-translate-y-1 hover:shadow-lg transition-all group">
-                        <img src="icons/twitter.svg" alt="TW" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
-                    </a>
-                    <a href="https://www.facebook.com/matchacontent/" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#6abf4b] hover:-translate-y-1 hover:shadow-lg transition-all group">
-                        <img src="icons/facebook.svg" alt="FB" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
-                    </a>
-                    <a href="https://linkedin.com/company/matchacontent" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#6abf4b] hover:-translate-y-1 hover:shadow-lg transition-all group">
-                        <img src="icons/linkedin.svg" alt="LI" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
-                    </a>
-                </div>
-            </div>
-            <p class="text-gray-400 font-medium text-sm">© 2024 Matcha. All Rights Reserved</p>
-        </div>
-    </footer>
-    <script src="./app.js"></script>
-    <script>
-        // Hero Carousel
-        const heroItems = document.querySelectorAll('.hero-item');
-        const heroIndicators = document.querySelectorAll('.hero-indicators button');
-        const heroPrev = document.querySelector('.hero-prev');
-        const heroNext = document.querySelector('.hero-next');
-        let heroIdx = 0;
-        let heroInterval;
+				<div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+					<!-- Post 1 -->
+					<div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border border-gray-100 flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-2">
+						<div class="h-56 relative overflow-hidden bg-gray-200">
+							<img src="./img/carousel/carousel-01.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
+							<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+						</div>
+						<div class="p-8 flex flex-col flex-grow">
+							<p class="text-xs font-bold text-[#67b54b] mb-4 uppercase tracking-widest flex items-center gap-2">Performance <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span> 21 min</p>
+							<h5 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#025157] transition-colors leading-snug line-clamp-2">Ecommerce Blogging: The 2020 Guide for Online Stores and DTC Brands</h5>
+							<p class="text-gray-600 mb-8 flex-grow line-clamp-3 leading-relaxed">Table of ContentsWhy Ecommerce Businesses Need a Blog in 2020Document Your Ecommerce Blog StrategyPublication: How to Create High-Performing Blog ContentDistribution:...</p>
+							<div class="flex items-center gap-4 pt-6 border-t border-gray-100 mt-auto">
+								<img src="./img/avatar.png" class="w-12 h-12 rounded-full border-2 border-white shadow-md object-cover" />
+								<div>
+									<p class="font-bold text-gray-800 text-sm">Shauna Ward</p>
+									<p class="text-xs text-gray-500 font-medium">Bedu Contributor</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Post 2 -->
+					<div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border border-gray-100 flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-2">
+						<div class="h-56 relative overflow-hidden bg-gray-200">
+							<img src="./img/carousel/carousel-02.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
+							<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+						</div>
+						<div class="p-8 flex flex-col flex-grow">
+							<p class="text-xs font-bold text-[#67b54b] mb-4 uppercase tracking-widest flex items-center gap-2">Performance <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span> 6 min</p>
+							<h5 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#025157] transition-colors leading-snug line-clamp-2">What Is Licensed Content and How Does It Help Your Business Grow?</h5>
+							<p class="text-gray-600 mb-8 flex-grow line-clamp-3 leading-relaxed">TL;DR: Licensed content, sometimes called syndicated content, is content produced by a professional publisher that can be legally licensed for...</p>
+							<div class="flex items-center gap-4 pt-6 border-t border-gray-100 mt-auto">
+								<img src="./img/avatar.png" class="w-12 h-12 rounded-full border-2 border-white shadow-md object-cover" />
+								<div>
+									<p class="font-bold text-gray-800 text-sm">Rob Glover</p>
+									<p class="text-xs text-gray-500 font-medium">Bedu Editor</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        function showHero(index) {
-            heroItems.forEach((item, i) => {
-                if (i === index) {
-                    item.classList.remove('opacity-0');
-                    item.classList.add('opacity-100');
-                    heroIndicators[i].classList.remove('opacity-50');
-                    heroIndicators[i].classList.add('opacity-100');
-                } else {
-                    item.classList.add('opacity-0');
-                    item.classList.remove('opacity-100');
-                    heroIndicators[i].classList.add('opacity-50');
-                    heroIndicators[i].classList.remove('opacity-100');
-                }
-            });
-        }
+		<!-- Call to Actions -->
+		<div class="h-[400px] bg-center bg-cover bg-no-repeat relative fixed-bg" style="background-image: url(&quot;https://getmatcha.com/wp-content/themes/getmatcha/css/../img/home_people.png&quot;)">
+			<div class="absolute inset-0 bg-gradient-to-b from-[#fffbf7]/50 to-white/10 backdrop-blur-[2px]"></div>
+		</div>
 
-        function nextHero() {
-            heroIdx = (heroIdx + 1) % heroItems.length;
-            showHero(heroIdx);
-        }
+		<div class="bg-[#96d178] px-6 py-16 text-center transform -translate-y-24 mx-4 md:mx-auto max-w-5xl rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(150,209,120,0.4)] border border-white/40 backdrop-blur-md relative z-10 overflow-hidden">
+			<div class="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+			<div class="absolute bottom-0 left-0 w-64 h-64 bg-black/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+			<h2 class="relative z-10 font-serif text-5xl md:text-6xl text-[#025157] font-black mb-8 tracking-tight drop-shadow-sm">Try Matcha free for 7 days.</h2>
+			<form class="signup-form max-w-xl mx-auto flex flex-col md:flex-row gap-3 mb-6 relative z-10">
+				<input type="email" placeholder="Enter email address" required class="flex-grow px-6 py-4 rounded-2xl border-none focus:ring-4 focus:ring-[#025157]/20 outline-none shadow-inner text-gray-800 font-medium w-full" />
+				<button class="bg-[#025157] hover:bg-[#042A2D] text-white font-bold py-4 px-10 rounded-2xl shadow-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 whitespace-nowrap w-full md:w-auto">Sign Up Free &rarr;</button>
+			</form>
+			<p class="relative z-10 text-[#025157]/90 font-medium leading-relaxed max-w-sm mx-auto">
+				Start publishing today with a free 7-day trial. <br />
+				<strong>No credit card</strong> required.
+			</p>
+		</div>
 
-        function prevHero() {
-            heroIdx = (heroIdx - 1 + heroItems.length) % heroItems.length;
-            showHero(heroIdx);
-        }
+		<section class="max-w-6xl mx-auto px-6 mb-24 relative -mt-8">
+			<div class="bg-gradient-to-br from-[#025157] to-[#043b40] rounded-3xl p-10 md:p-16 shadow-2xl flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
+				<div class="absolute top-0 right-0 w-full h-full bg-[url('./icons/capture.png')] bg-no-repeat bg-right-top opacity-5 mix-blend-overlay pointer-events-none filter scale-150"></div>
+				<div class="md:w-1/2 relative z-10">
+					<h2 class="font-serif text-4xl lg:text-5xl text-white font-bold mb-6 leading-tight">Try free for 7 days. Publish your first article today!</h2>
+					<p class="text-white/80 text-lg">Want to learn more? <a href="#" class="text-[#6abf4b] font-bold hover:text-[#96d178] transition-colors pb-1 border-b-2 border-transparent hover:border-[#96d178]">Schedule a demo &rarr;</a></p>
+				</div>
+				<div class="md:w-1/2 w-full relative z-10">
+					<form class="signup-form flex flex-col gap-3 relative bg-white/10 p-2 text-white rounded-2xl backdrop-blur-sm border border-white/10">
+						<input type="email" placeholder="Enter email address" class="w-full px-5 py-4 rounded-xl mb-2 text-gray-800 border-none focus:ring-4 focus:ring-[#6abf4b]/30 outline-none shadow-inner font-medium bg-white" />
+						<button class="w-full bg-[#67b54b] hover:bg-[#52933a] text-white font-bold py-4 rounded-xl shadow-lg transition-transform hover:-translate-y-0.5">Sign Up Free &rarr;</button>
+					</form>
+					<p class="text-[#b3cbcd] mt-6 text-sm leading-relaxed max-w-md mx-auto md:mx-0 font-medium text-center md:text-left">Access Matcha’s content marketing platform free for 7 days. No credit card required.</p>
+				</div>
+			</div>
+		</section>
 
-        heroNext.addEventListener('click', () => { nextHero(); resetHeroTimer(); });
-        heroPrev.addEventListener('click', () => { prevHero(); resetHeroTimer(); });
-        heroIndicators.forEach((btn, i) => {
-            btn.addEventListener('click', () => { heroIdx = i; showHero(heroIdx); resetHeroTimer(); });
-        });
+		<!-- Footer -->
+		<footer class="bg-white border-t border-gray-100 py-20 px-6 md:px-12 relative overflow-hidden">
+			<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20 border-b border-gray-200 pb-20">
+				<div class="lg:col-span-4">
+					<h2 class="font-serif text-3xl text-[#025157] font-bold mb-4 drop-shadow-sm">Subscribe to our newsletter</h2>
+					<p class="text-gray-500 font-medium mb-8 leading-relaxed">Become a content marketing expert, subscribe to the newsletter.</p>
+					<form class="signup-form flex flex-col sm:flex-row gap-3">
+						<input type="email" placeholder="Email address" required class="flex-1 px-5 py-3.5 rounded-xl border border-gray-200 focus:border-[#67b54b] focus:ring-2 focus:ring-[#67b54b]/20 outline-none transition-all shadow-sm text-gray-800 bg-gray-50/50" />
+						<button class="bg-[#025157] hover:bg-[#033b3f] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-colors w-full sm:w-auto">Subscribe &rarr;</button>
+					</form>
+				</div>
+				<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+					<div>
+						<h4 class="uppercase text-xs font-bold text-[#025157] tracking-widest mb-6 opacity-80 border-b border-gray-100 pb-4 inline-block">Platform</h4>
+						<ul class="space-y-4 text-gray-600 font-medium">
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Pricing</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Publish</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Distribute</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Measure</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Integrations</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="uppercase text-xs font-bold text-[#025157] tracking-widest mb-6 opacity-80 border-b border-gray-100 pb-4 inline-block">Matcha</h4>
+						<ul class="space-y-4 text-gray-600 font-medium">
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>About</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Story</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Team</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Careers</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-span-2 md:col-span-1 border-t md:border-t-0 border-gray-100 pt-8 md:pt-0">
+						<h4 class="uppercase text-xs font-bold text-[#025157] tracking-widest mb-6 opacity-80 border-b border-gray-100 pb-4 inline-block">Legal</h4>
+						<ul class="space-y-4 text-gray-600 font-medium flex flex-wrap md:flex-col gap-6 md:gap-0">
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Privacy</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Terms</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Support</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-[#67b54b] transition-colors flex items-center gap-2 group md:mb-0 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-[#67b54b] transition-colors"></span>Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+				<div class="flex items-center gap-10">
+					<a href="#"><img src="./img/logo.png" alt="Matcha" class="h-9 w-auto mix-blend-multiply opacity-90 hover:opacity-100 transition-opacity drop-shadow-sm" /></a>
+					<div class="flex items-center gap-3">
+						<a href="https://www.instagram.com/matchacontent" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#67b54b] hover:-translate-y-1 hover:shadow-lg transition-all group">
+							<img src="icons/instagram.svg" alt="IG" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
+						</a>
+						<a href="https://twitter.com/matchacontent" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#6abf4b] hover:-translate-y-1 hover:shadow-lg transition-all group">
+							<img src="icons/twitter.svg" alt="TW" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
+						</a>
+						<a href="https://www.facebook.com/matchacontent/" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#6abf4b] hover:-translate-y-1 hover:shadow-lg transition-all group">
+							<img src="icons/facebook.svg" alt="FB" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
+						</a>
+						<a href="https://linkedin.com/company/matchacontent" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#6abf4b] hover:-translate-y-1 hover:shadow-lg transition-all group">
+							<img src="icons/linkedin.svg" alt="LI" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
+						</a>
+					</div>
+				</div>
+				<p class="text-gray-400 font-medium text-sm">© 2024 Matcha. All Rights Reserved</p>
+			</div>
+		</footer>
+		<script src="./app.js"></script>
+		<script>
+			// Hero Carousel
+			const heroItems = document.querySelectorAll(".hero-item");
+			const heroIndicators = document.querySelectorAll(".hero-indicators button");
+			const heroPrev = document.querySelector(".hero-prev");
+			const heroNext = document.querySelector(".hero-next");
+			let heroIdx = 0;
+			let heroInterval;
 
-        function resetHeroTimer() {
-            clearInterval(heroInterval);
-            heroInterval = setInterval(nextHero, 5000);
-        }
-        resetHeroTimer();
+			function showHero(index) {
+				heroItems.forEach((item, i) => {
+					if (i === index) {
+						item.classList.remove("opacity-0");
+						item.classList.add("opacity-100");
+						heroIndicators[i].classList.remove("opacity-50");
+						heroIndicators[i].classList.add("opacity-100");
+					} else {
+						item.classList.add("opacity-0");
+						item.classList.remove("opacity-100");
+						heroIndicators[i].classList.add("opacity-50");
+						heroIndicators[i].classList.remove("opacity-100");
+					}
+				});
+			}
 
-        // Story Carousel
-        const storyItems = document.querySelectorAll('.story-item');
-        const storyIndicators = document.querySelectorAll('.story-indicators button');
-        const storyPrev = document.querySelector('.story-prev');
-        const storyNext = document.querySelector('.story-next');
-        let storyIdx = 0;
-        let storyInterval;
+			function nextHero() {
+				heroIdx = (heroIdx + 1) % heroItems.length;
+				showHero(heroIdx);
+			}
 
-        function showStory(index) {
-            storyItems.forEach((item, i) => {
-                if (i === index) {
-                    item.classList.remove('opacity-0', 'scale-95', 'z-0', 'pointer-events-none');
-                    item.classList.add('opacity-100', 'scale-100', 'z-10');
-                    storyIndicators[i].classList.remove('bg-[#025157]/30');
-                    storyIndicators[i].classList.add('bg-[#025157]');
-                } else {
-                    item.classList.add('opacity-0', 'scale-95', 'z-0', 'pointer-events-none');
-                    item.classList.remove('opacity-100', 'scale-100', 'z-10');
-                    storyIndicators[i].classList.add('bg-[#025157]/30');
-                    storyIndicators[i].classList.remove('bg-[#025157]');
-                }
-            });
-        }
+			function prevHero() {
+				heroIdx = (heroIdx - 1 + heroItems.length) % heroItems.length;
+				showHero(heroIdx);
+			}
 
-        function nextStory() {
-            storyIdx = (storyIdx + 1) % storyItems.length;
-            showStory(storyIdx);
-        }
+			heroNext.addEventListener("click", () => {
+				nextHero();
+				resetHeroTimer();
+			});
+			heroPrev.addEventListener("click", () => {
+				prevHero();
+				resetHeroTimer();
+			});
+			heroIndicators.forEach((btn, i) => {
+				btn.addEventListener("click", () => {
+					heroIdx = i;
+					showHero(heroIdx);
+					resetHeroTimer();
+				});
+			});
 
-        function prevStory() {
-            storyIdx = (storyIdx - 1 + storyItems.length) % storyItems.length;
-            showStory(storyIdx);
-        }
+			function resetHeroTimer() {
+				clearInterval(heroInterval);
+				heroInterval = setInterval(nextHero, 5000);
+			}
+			resetHeroTimer();
 
-        storyNext.addEventListener('click', () => { nextStory(); resetStoryTimer(); });
-        storyPrev.addEventListener('click', () => { prevStory(); resetStoryTimer(); });
-        storyIndicators.forEach((btn, i) => {
-            btn.addEventListener('click', () => { storyIdx = i; showStory(storyIdx); resetStoryTimer(); });
-        });
+			// Story Carousel
+			const storyItems = document.querySelectorAll(".story-item");
+			const storyIndicators = document.querySelectorAll(".story-indicators button");
+			const storyPrev = document.querySelector(".story-prev");
+			const storyNext = document.querySelector(".story-next");
+			let storyIdx = 0;
+			let storyInterval;
 
-        function resetStoryTimer() {
-            clearInterval(storyInterval);
-            storyInterval = setInterval(nextStory, 6000);
-        }
-        resetStoryTimer();
-    </script>
-    <style>
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none; 
-        }
-        .perspective-1000 {
-            perspective: 1000px;
-        }
-        .fixed-bg {
-            background-attachment: fixed;
-        }
-    </style>
-</body>
+			function showStory(index) {
+				storyItems.forEach((item, i) => {
+					if (i === index) {
+						item.classList.remove("opacity-0", "scale-95", "z-0", "pointer-events-none");
+						item.classList.add("opacity-100", "scale-100", "z-10");
+						storyIndicators[i].classList.remove("bg-[#025157]/30");
+						storyIndicators[i].classList.add("bg-[#025157]");
+					} else {
+						item.classList.add("opacity-0", "scale-95", "z-0", "pointer-events-none");
+						item.classList.remove("opacity-100", "scale-100", "z-10");
+						storyIndicators[i].classList.add("bg-[#025157]/30");
+						storyIndicators[i].classList.remove("bg-[#025157]");
+					}
+				});
+			}
+
+			function nextStory() {
+				storyIdx = (storyIdx + 1) % storyItems.length;
+				showStory(storyIdx);
+			}
+
+			function prevStory() {
+				storyIdx = (storyIdx - 1 + storyItems.length) % storyItems.length;
+				showStory(storyIdx);
+			}
+
+			storyNext.addEventListener("click", () => {
+				nextStory();
+				resetStoryTimer();
+			});
+			storyPrev.addEventListener("click", () => {
+				prevStory();
+				resetStoryTimer();
+			});
+			storyIndicators.forEach((btn, i) => {
+				btn.addEventListener("click", () => {
+					storyIdx = i;
+					showStory(storyIdx);
+					resetStoryTimer();
+				});
+			});
+
+			function resetStoryTimer() {
+				clearInterval(storyInterval);
+				storyInterval = setInterval(nextStory, 6000);
+			}
+			resetStoryTimer();
+		</script>
+		<style>
+			.hide-scrollbar::-webkit-scrollbar {
+				display: none;
+			}
+			.hide-scrollbar {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+			.perspective-1000 {
+				perspective: 1000px;
+			}
+			.fixed-bg {
+				background-attachment: fixed;
+			}
+		</style>
+	</body>
 </html>

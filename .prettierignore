@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+public/
+output.css
+*.min.js
+*.test.js
+*.spec.js
+*.config.js
