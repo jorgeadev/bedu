@@ -1,28 +1,41 @@
 {
-  "name": "santander-bedu-frontend",
-  "version": "1.0.0",
-  "description": "git init",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx @tailwindcss/cli -i ./styles.css -o ./output.css --watch",
-    "prepare": "husky"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jorgeadev/bedu.git"
-  },
-  "author": "Jorge Alberto Gomez Gomez",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jorgeadev/bedu/issues"
-  },
-  "homepage": "https://github.com/jorgeadev/bedu#readme",
-  "dependencies": {
-    "@tailwindcss/cli": "4.2.2",
-    "tailwindcss": "4.2.2"
-  },
-  "devDependencies": {
-    "husky": "9.1.7"
-  }
+	"name": "santander-bedu-frontend",
+	"version": "1.0.0",
+	"description": "git init",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build:css": "npx @tailwindcss/cli -i ./styles.css -o ./output.css --watch",
+		"prepare": "husky",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jorgeadev/bedu.git"
+	},
+	"author": "Jorge Alberto Gomez Gomez",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jorgeadev/bedu/issues"
+	},
+	"homepage": "https://github.com/jorgeadev/bedu#readme",
+	"dependencies": {
+		"@tailwindcss/cli": "4.2.2",
+		"tailwindcss": "4.2.2"
+	},
+	"devDependencies": {
+		"eslint": "10.2.0",
+		"husky": "9.1.7",
+		"lint-staged": "16.4.0",
+		"prettier": "3.8.1"
+	},
+	"lint-staged": {
+		"*.js": [
+			"pnpm run lint:fix",
+			"pnpm run format"
+		]
+	}
 }

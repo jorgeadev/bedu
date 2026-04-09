@@ -42,15 +42,15 @@ npm install -g pnpm
 
 1. **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/jorgeadev/bedu.git
-   ```
+    ```bash
+    git clone https://github.com/jorgeadev/bedu.git
+    ```
 
 2. **Install dependencies**:
 
-   ```bash
-   pnpm install
-   ```
+    ```bash
+    pnpm install
+    ```
 
 3. **Running the project**:
    Since it's a static site, you can open `index.html` directly in your browser or use a live server extension.
