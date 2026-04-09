@@ -4,7 +4,8 @@
     "description": "git init",
     "main": "app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:css": "npx @tailwindcss/cli -i ./styles.css -o ./output.css --watch"
     },
     "repository": {
         "type": "git",
@@ -17,6 +18,7 @@
     },
     "homepage": "https://github.com/jorgealbertogomezgomez77/bedu#readme",
     "dependencies": {
-        "sass": "^1.35.1"
+        "@tailwindcss/cli": "^4.2.2",
+        "tailwindcss": "^4.2.2"
     }
 }
