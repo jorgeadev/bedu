@@ -1,8 +1,9 @@
 /** @type {import("eslint").Linter.Config[]} */
 export default [
 	{
-		files: ["**/*.{js,mjs,cjs,ts}"]
-	}, {
+		files: ["**/*.{js,mjs,cjs,ts}"],
+	},
+	{
 		rules: {
 			semi: ["warn", "always"],
 			indent: ["error", "tab", { SwitchCase: 1 }],
