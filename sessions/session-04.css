@@ -13,6 +13,7 @@
 	height: 50px;
 }
 
+
 .main {
 	display: flex;
 	width: 500px;
@@ -22,14 +23,17 @@
 	flex-basis: 100px;
 	flex-grow: 1;
 }
+
 .main div:nth-of-type(2) {
 	flex-basis: 100px;
 	flex-grow: 5;
 }
+
 .main div:nth-of-type(3) {
 	flex-basis: 100px;
 	flex-grow: 1;
 }
+
 .main div:nth-of-type(4) {
 	flex-basis: 100px;
 	flex-grow: 1;
